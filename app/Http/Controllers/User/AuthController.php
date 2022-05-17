@@ -12,6 +12,9 @@ class AuthController extends Controller
 {
     public function loginDetails()
     {
+        if (Auth::guard('user')->check()) {
+            return to_route('/');
+        }
         return view('User.login.login');
     }
 
@@ -33,6 +36,9 @@ class AuthController extends Controller
 
     public function RegisterPage()
     {
+        if (Auth::guard('user')->check()) {
+            return to_route('/');
+        }
         return view('User.login.Register');
     }
 

@@ -3,7 +3,7 @@
     <h5 class="text-center mt-2 mb-3">User Login Form</h5>
     <div class="row">
         <div class="col-6 offset-3">
-            <form class="signin-form mb-3" action="{{route('Staff.Login')}}" method="post">
+            <form class="signin-form mb-3" action="{{route('User.Login')}}" method="post">
                 @csrf
                 <div class="form-group">
                     <label>Email</label>
